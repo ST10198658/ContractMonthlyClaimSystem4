@@ -1,0 +1,131 @@
+﻿@model ContractMonthlyClaimSystem.Models.ClaimApplication
+
+@{
+    ViewData["Title"] = "Reject Claim";
+}
+<form asp-action="RejectClaim" method="post">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Reject Claim Application Details</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+
+
+            <table class="table table-bordered table-striped">
+
+                <thead>
+                    <tr>
+                        <th class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Lecturer)
+                        </th>
+                        <th class="col-sm-3">
+                            @Html.DisplayFor(model => model.Lecturer.FullName)
+                        </th>
+                        <th class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.NumOfDays)
+                        </th>
+                        <th class="col-sm-3">
+                            @Html.DisplayFor(model => model.NumOfDays)
+                        </th>
+
+                    <tr>
+                        <th class="col-sm-3">
+                                @Html.DisplayNameFor(model => model.StartDate)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayFor(model => model.StartDate)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayNameFor(model => model.EndDate)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayFor(model => model.EndDate)
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="col-sm-3">
+                                @Html.DisplayNameFor(model => model.Duration)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayFor(model => model.Duration.Description)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayNameFor(model => model.ClaimType)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayFor(model => model.ClaimType.Name)
+                        </th>
+                    </tr>
+
+
+                    <tr>
+                        <th class="col-sm-3">
+                                @Html.DisplayNameFor(model => model.ApprovedId)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayFor(model => model.ApprovedId)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayNameFor(model => model.ApprovedOn)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayFor(model => model.ApprovedOn)
+                        </th>
+
+
+                    </tr>
+                    <tr>
+                        <th class="col-sm-3">
+                                @Html.DisplayNameFor(model => model.CreatedById)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayFor(model => model.CreatedById)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayNameFor(model => model.CreatedOn)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayFor(model => model.CreatedOn)
+                        </th>
+                    </tr>
+
+
+                    <tr>
+                        <th class="col-sm-3">
+                                @Html.DisplayNameFor(model => model.ModifiedById)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayFor(model => model.ModifiedById)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayNameFor(model => model.ModifiedOn)
+                        </th>
+                        <th class="col-sm-3">
+                                @Html.DisplayFor(model => model.ModifiedOn)
+                        </th>
+
+
+                    </tr>
+
+
+
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label asp-for="ApprovalNotes" class="control-label"></label>
+
+            <textarea class="form-control" asp-for="ApprovalNotes"></textarea>
+            <div class="card-footer">
+                <div class="clearfix">
+                    <a asp-action="Index" class="btn btn-danger push-left">Back to List</a>
+                    <input type="submit" value="Reject Claim Application" class="btn btn-danger" />
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
